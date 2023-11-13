@@ -9,23 +9,33 @@
 </head>
 <body>
     <div class="Container">
-        <div class="Display"></div>
-        <p class="PowerButton" onclick="Power()">ON</p>
-        <p class="Equals" onabort="Equals()">=</p>
-        <p class="Operation" onclick="Plus()">+</p>
-        <p class="Operation" onclick="Minus()">-</p>
-        <p class="Operation" onclick="Multiply()">×</p>
-        <p class="Operation" onclick="Divide()">÷</p>
-        <p class="Numbers" onclick="Dot()">.</p>
-        <p class="Numbers" onclick="NumberOne()">1</p>
-        <p class="Numbers" onclick="NumberTwo()">2</p>
-        <p class="Numbers" onclick="NumberTwo()">3</p>
-        <p class="Numbers" onclick="NumberTwo()">4</p>
-        <p class="Numbers" onclick="NumberTwo()">5</p>
-        <p class="Numbers" onclick="NumberTwo()">6</p>
-        <p class="Numbers" onclick="NumberTwo()">7</p>
-        <p class="Numbers" onclick="NumberTwo()">8</p>
-        <p class="Numbers" onclick="NumberTwo()">9</p>
+        <input type="text" id="display" readonly>
+        <button onclick="appendToDisplay('(')"> ( </button>
+        <button onclick="appendToDisplay(')')"> ) </button>
+        <button onclick="Power()"> P </button>
+        <button onclick="Delete()"> DEL </button>
+        <button onclick="clearDisplay()"> C </button>
+        <button onclick="calculate()"> = </button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('^')">^</button>
+        <button onclick="calculateSqrt()">√</button>
+        <button onclick="calculateSin()">sin</button>
+        <button onclick="calculateCos()">cos</button>
+        <button onclick="calculateTan()">tan</button>
     </div>
 </body>
 </html>
