@@ -4,9 +4,12 @@ let history = [];
 
 //Power
 function power() {
+    var powerElement = document.getElementById('power');
+
     powered == false ? powered = true : powered = false;
     powered == false ? $(':button').prop('disabled', true) : $(':button').prop('disabled', false);
-    document.getElementById('power').disabled = false;
+    powered == false ? powerElement.innerText = "ON" : powerElement.innerText = "OFF";
+    powerElement.disabled = false;
 }
 
 //Display Functions
