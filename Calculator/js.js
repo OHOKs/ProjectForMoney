@@ -2,10 +2,14 @@ let powered = false;
 
 function power(){
     powered == false ? powered = true : powered = false;
+    
+    console.log(powered)
 }
 
 function deleteLastCharacter(){
-
+    var displayValue = document.getElementById('display').value;
+    
+    document.getElementById('display').value = displayValue.slice(0, -1);
 }
 
 function appendToDisplay(value) {
@@ -17,29 +21,29 @@ function clearDisplay() {
 }
 
 function sqrt() {
-    var displayValue = eval(document.getElementById('display').value);
-    var result = Math.sqrt(displayValue);
+    var displayCalculatedValue = eval(document.getElementById('display').value);
+    var result = Math.sqrt(displayCalculatedValue);
 
     document.getElementById('display').value = result;
 }
 
 function sin() {
-    var displayValue = eval(document.getElementById('display').value);
-    var result = Math.sin(displayValue);
+    var displayCalculatedValue = eval(document.getElementById('display').value);
+    var result = Math.sin(displayCalculatedValue);
 
     document.getElementById('display').value = result;
 }
 
 function cos() {
-    var displayValue = eval(document.getElementById('display').value);
-    var result = Math.cos(displayValue);
+    var displayCalculatedValue = eval(document.getElementById('display').value);
+    var result = Math.cos(displayCalculatedValue);
 
     document.getElementById('display').value = result;
 }
 
 function tan() {
-    var displayValue = eval(document.getElementById('display').value);
-    var result = Math.tan(displayValue);
+    var displayCalculatedValue = eval(document.getElementById('display').value);
+    var result = Math.tan(displayCalculatedValue);
 
     document.getElementById('display').value = result;
 }
