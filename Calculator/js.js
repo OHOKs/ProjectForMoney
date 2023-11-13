@@ -1,57 +1,89 @@
+//Basic Variables
 let powered = false;
+let history = [];
 
-function power(){
+//Power
+function power() {
     powered == false ? powered = true : powered = false;
-    
-    console.log(powered)
+    powered == false ? $(':button').prop('disabled', true) : $(':button').prop('disabled', false);
+    document.getElementById('power').disabled = false;
 }
 
-function deleteLastCharacter(){
-    var displayValue = document.getElementById('display').value;
-    
-    document.getElementById('display').value = displayValue.slice(0, -1);
-}
-
+//Display Functions
 function appendToDisplay(value) {
     document.getElementById('display').value += value;
 }
 
-function clearDisplay() {
-    document.getElementById('display').value = '';
+function deleteLastCharacter() {
+    var displayValue = document.getElementById('display').value;
+
+    document.getElementById('display').value = displayValue.slice(0, -1);
 }
 
-function sqrt() {
-    var displayCalculatedValue = eval(document.getElementById('display').value);
-    var result = Math.sqrt(displayCalculatedValue);
+function clearDisplay() {
+    document.getElementById('display').value = '';   
+}
 
-    document.getElementById('display').value = result;
+//Operations
+function sqrt() {
+    var calculatedDisplayValue = eval(document.getElementById('display').value);
+    var result = Math.sqrt(calculatedDisplayValue);
+
+    document.getElementById('display').value = result;   
+    history[history.length] = result;
 }
 
 function sin() {
-    var displayCalculatedValue = eval(document.getElementById('display').value);
-    var result = Math.sin(displayCalculatedValue);
+    var calculatedDisplayValue = eval(document.getElementById('display').value);
+    var result = Math.sin(calculatedDisplayValue);
 
-    document.getElementById('display').value = result;
+    document.getElementById('display').value = result;   
+    history[history.length] = result;
+
 }
 
 function cos() {
-    var displayCalculatedValue = eval(document.getElementById('display').value);
-    var result = Math.cos(displayCalculatedValue);
+    var calculatedDisplayValue = eval(document.getElementById('display').value);
+    var result = Math.cos(calculatedDisplayValue);
 
     document.getElementById('display').value = result;
+    history[history.length] = result;
 }
 
 function tan() {
-    var displayCalculatedValue = eval(document.getElementById('display').value);
-    var result = Math.tan(displayCalculatedValue);
+    var calculatedDisplayValue = eval(document.getElementById('display').value);
+    var result = Math.tan(calculatedDisplayValue);
 
-    document.getElementById('display').value = result;
+    document.getElementById('display').value = result;  
+    history[history.length] = result;
+}
+
+function afa() {
+    var displayValue = document.getElementById('display').value;
+    var result = parseInt(displayValue) / 27;
+
+    document.getElementById('display').value = result;  
+    history[history.length] = result;
 }
 
 function calculate() {
     try {
-        document.getElementById('display').value = eval(document.getElementById('display').value);
+        document.getElementById('display').value = eval(document.getElementById('display').value.replace("^", '**'));
+
+        history[history.length] = eval(document.getElementById('display').value);
     } catch {
         document.getElementById('display').value = 'Error';
+    }
+}
+
+//Stored History
+function historyPopup() {
+    var historyElement = document.getElementById('history-content');
+    historyElement.innerHTML = '';
+
+    for(let i = 0; i < history.length; i++){
+        var newParagraph = document.createElement("p");
+        newParagraph.textContent = history[i];
+        historyElement.appendChild(newParagraph);
     }
 }

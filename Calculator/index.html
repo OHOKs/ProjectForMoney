@@ -6,37 +6,55 @@
     <title>Scientific Calculator</title>
     <script src="js.js"></script>
     <link rel="stylesheet" href="css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="Container">
         <input type="text" id="display" readonly>
         <div class="LED"></div>
-        <button onclick="appendToDisplay('(')"> ( </button>
-        <button onclick="appendToDisplay(')')"> ) </button>
-        <button onclick="power()"> P </button>
-        <button onclick="deleteLastCharacter()"><img src="delete.png" style="height: 10px;" width="10px"></button>
-        <button onclick="clearDisplay()"> C </button>
-        <button onclick="calculate()"> = </button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="appendToDisplay('+')">+</button>
-        <button onclick="appendToDisplay('-')">-</button>
-        <button onclick="appendToDisplay('*')">×</button>
-        <button onclick="appendToDisplay('/')">÷</button>
-        <button onclick="appendToDisplay('^')">^</button>
-        <button onclick="sqrt()">√</button>
-        <button onclick="sin()">sin</button>
-        <button onclick="cos()">cos</button>
-        <button onclick="tan()">tan</button>
+        <button onclick="power()" id="power"> P </button>
+        <button onclick="appendToDisplay('(')" disabled="true" type="button"> ( </button>
+        <button onclick="appendToDisplay(')')" disabled="true"> ) </button>
+        <button onclick="deleteLastCharacter()" disabled="true"><img src="delete.png" style="height: 10px;" width="10px"></button>
+        <button onclick="clearDisplay()" disabled="true"> C </button>
+        <button onclick="calculate()" disabled="true"> = </button>
+        <button onclick="historyPopup()" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled="true"> H </button>
+        <button onclick="appendToDisplay('0')" disabled="true"> 0 </button>
+        <button onclick="appendToDisplay('1')" disabled="true"> 1 </button>
+        <button onclick="appendToDisplay('2')" disabled="true"> 2 </button>
+        <button onclick="appendToDisplay('3')" disabled="true"> 3 </button>
+        <button onclick="appendToDisplay('4')" disabled="true"> 4 </button>
+        <button onclick="appendToDisplay('5')" disabled="true"> 5 </button>
+        <button onclick="appendToDisplay('6')" disabled="true"> 6 </button>
+        <button onclick="appendToDisplay('7')" disabled="true"> 7 </button>
+        <button onclick="appendToDisplay('8')" disabled="true"> 8 </button>
+        <button onclick="appendToDisplay('9')" disabled="true"> 9 </button>
+        <button onclick="appendToDisplay('.')" disabled="true"> . </button>
+        <button onclick="appendToDisplay('+')" disabled="true"> + </button>
+        <button onclick="appendToDisplay('-')" disabled="true"> - </button>
+        <button onclick="appendToDisplay('*')" disabled="true"> × </button>
+        <button onclick="appendToDisplay('/')" disabled="true">÷</button>
+        <button onclick="appendToDisplay('^')" disabled="true">^</button>
+        <button onclick="sqrt()" disabled="true"> √ </button>
+        <button onclick="sin()" disabled="true"> sin </button>
+        <button onclick="cos()" disabled="true"> cos </button>
+        <button onclick="tan()" disabled="true"> tan </button>
+        <button onclick="afa()" disabled="true"> áfa </button>
     </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">History</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="history-content">
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
