@@ -9,6 +9,7 @@ function power() {
     powered == false ? powered = true : powered = false;
     powered == false ? $(':button').prop('disabled', true) : $(':button').prop('disabled', false);
     powered == false ? powerElement.innerText = "ON" : powerElement.innerText = "OFF";
+    powered == false ? powerElement.style.backgroundColor = "green" : powerElement.style.backgroundColor = "red";
     powerElement.disabled = false;
 }
 
