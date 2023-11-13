@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <button onclick="power()" id="power" style="background-color: green;">ON</button>
+    <div id="container">
+        <div class="row">
+            <input type="text" id="display" readonly disabled="true">
+        </div>
+        <div class="LED"></div>
+        <button onclick="appendToDisplay('(')" id="normalButtons" disabled="true"> ( </button>
+        <button onclick="appendToDisplay(')')" id="normalButtons" disabled="true"> ) </button>
+        <button onclick="deleteLastCharacter()" id="delete" disabled="true"><img src="dlt.png" style="height: 14px;" width="15px" id="deleteImage"></button>
+        <button onclick="clearDisplay()" disabled="true" id="clear"> C </button>
+        <button onclick="sin()" id="sin" disabled="true"> sin </button>
+        <button onclick="cos()" id="cos" disabled="true"> cos </button>
+        <button onclick="tan()" id="tan" disabled="true"> tan </button>
+        <button onclick="afa()" id="afa" disabled="true"> áfa </button>
+        <button onclick="historyPopup()" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled="true" id="normalButtons"> H </button>
+        <button onclick="sqrt()" id="sqrt" disabled="true">√</button>
+        <button onclick="appendToDisplay('^')" id="exponentiation" disabled="true">^</button>
+        <button onclick="appendToDisplay('*')" id="normalButtons" disabled="true">×</button>
+        <button onclick="appendToDisplay('1')" id="normalButtons" disabled="true">1</button>
+        <button onclick="appendToDisplay('2')" id="normalButtons" disabled="true">2</button>
+        <button onclick="appendToDisplay('3')" id="normalButtons" disabled="true">3</button>
+        <button onclick="appendToDisplay('/')" id="normalButtons" disabled="true">÷</button>
+        <button onclick="appendToDisplay('4')" id="normalButtons" disabled="true">4</button>
+        <button onclick="appendToDisplay('5')" id="normalButtons" disabled="true">5</button>
+        <button onclick="appendToDisplay('6')" id="normalButtons" disabled="true">6</button>
+        <button onclick="appendToDisplay('+')" id="normalButtons" disabled="true">+</button>
+        <button onclick="appendToDisplay('7')" id="normalButtons" disabled="true">7</button>
+        <button onclick="appendToDisplay('8')" id="normalButtons" disabled="true">8</button>
+        <button onclick="appendToDisplay('9')" id="normalButtons" disabled="true">9</button>
+        <button onclick="appendToDisplay('-')" id="normalButtons" disabled="true">-</button>
+        <button onclick="appendToDisplay('0')" id="normalButtons" disabled="true">0</button>
+        <button onclick="appendToDisplay('.')" id="normalButtons" disabled="true">.</button>
+        <button onclick="calculate()" id="calculate" disabled="true"> = </button>
+    </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">History</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="history-content">
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

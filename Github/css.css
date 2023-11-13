@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+
+body{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgb(251, 207, 63) 0%, rgba(252,70,107,1) 100%);
+    position: relative;
+    align-items: center;
+    display: flex;
+    font-display: swap;
+    height: 100vh;
+    justify-content: center;
+}
+
+#container{
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: -15px 20px 30px #000;
+    max-width: 400px;
+    min-width: 100px;
+    max-width: 350px;
+    min-width: 300px;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#power{
+    font-weight: bold;
+    margin-top: -650px;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    border-width: 0;
+    border-radius: 50%;
+    box-shadow: -10px 10px 30px #000;
+}
+
+#normalButtons{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+#delete{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+/*Some duplicated things*/
+#sin{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+#cos{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+#tan{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+#afa{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+#sqrt{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+#exponentiation{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+#clear{
+    margin: 1px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 24%;
+    height: 10%;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+#display{
+    text-align: right;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    max-width: 322px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    height: 50px;
+    backdrop-filter: blur(80px);
+    border-width: 0;
+    margin-bottom: 8px;
+}
+
+#calculate{
+    margin: 1px;
+    width: 48%;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+.deleteHover:hover{
+    transform: scale(1.15);
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+.calculateHover:hover {
+    transform: scale(1.15);
+    color: black;
+    background-color: rgb(0, 255, 0);
+}
+
+.normalButtonsHover:hover {
+    transform: scale(1.15);
+    background-color: rgb(0, 165, 194);
+    color: white;
+}
+
+.specialButtonsHover:hover {
+    transform: scale(1.15);
+    background-color: rgb(251, 176, 63);
+    color: white;
+}
+
+.clearButtonHover:hover {
+    transform: scale(1.15);
+    background-color: magenta;
+    color: white;
+}
